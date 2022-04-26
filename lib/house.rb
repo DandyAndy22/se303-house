@@ -21,13 +21,21 @@ class House
     elsif number == 10
       "This is the rooster that crowed in the morn that woke the priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
     else
-      "This is the #{the_horse(number)}farmer sowing his corn that kept the rooster that crowed in the morn that woke the priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
+      "This is the #{the_horse(number)}#{the_farmer}rooster that crowed in the morn that woke the priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
     end
   end
 
   def the_horse(number)
     if number == 12
       "horse and the hound and the horn that belonged to the "
+    else
+      ""
+    end
+  end
+
+  def the_farmer(number)
+    if number == 12
+      "farmer sowing his corn that kept the "
     else
       ""
     end
