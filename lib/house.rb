@@ -20,8 +20,10 @@ class House
       "This is the priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
     elsif number == 10
       "This is the rooster that crowed in the morn that woke the priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
-    else
-      "This is the #{the_horse(number)}#{the_farmer}rooster that crowed in the morn that woke the priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
+    elsif number == 11
+      "This is the #{the_horse(number)}farmer sowing his corn that kept the rooster that crowed in the morn that woke the priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
+    elsif number == 12
+      "This is the #{the_horse(number)}farmer sowing his corn that kept the rooster that crowed in the morn that woke the priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
     end
   end
 
@@ -33,26 +35,9 @@ class House
     end
   end
 
-  def the_farmer(number)
-    if number == 12
-      "farmer sowing his corn that kept the "
-    else
-      ""
-    end
-  end
+  
 
   def recite
-    "#{line(1)}\n" +
-    "#{line(2)}\n" +
-    "#{line(3)}\n" +
-    "#{line(4)}\n" +
-    "#{line(5)}\n" +
-    "#{line(6)}\n" +
-    "#{line(7)}\n" +
-    "#{line(8)}\n" +
-    "#{line(9)}\n" +
-    "#{line(10)}\n" +
-    "#{line(11)}\n" +
-    "#{line(12)}"
+    (1..12).map { |line_number| "#{line(line_number)}" + (line_number < 12 ? "\n" : "") }
   end
 end
