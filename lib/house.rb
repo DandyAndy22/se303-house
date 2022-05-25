@@ -6,10 +6,8 @@ class House
       "This is the malt that lay in the house that Jack built.\n"
     elsif number == 3
       "This is the rat that ate the malt that lay in the house that Jack built.\n"
-    elsif number == 4
-      "This is the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
     else
-      "This is #{the_horse(number)}#{the_farmer(number)}#{the_rooster(number)}#{the_priest(number)}#{the_man(number)}#{the_maiden(number)}#{the_cow(number)}#{the_dog()}the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
+      "This is #{the_horse(number)}#{the_farmer(number)}#{the_rooster(number)}#{the_priest(number)}#{the_man(number)}#{the_maiden(number)}#{the_cow(number)}#{the_dog(number)}the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
     end
   end
 
@@ -55,8 +53,10 @@ class House
     end
   end
 
-  def the_dog()
-    "the dog that worried "
+  def the_dog(number)
+    if number >= 5
+      "the dog that worried "
+    end
   end
 
   def recite
