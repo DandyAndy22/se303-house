@@ -2,10 +2,8 @@ class House
   def line(number)
     if number == 1
       "This is the house that Jack built.\n"
-    elsif number == 2
-      "This is the malt that lay in the house that Jack built.\n"
     else
-      "This is #{the_horse(number)}#{the_farmer(number)}#{the_rooster(number)}#{the_priest(number)}#{the_man(number)}#{the_maiden(number)}#{the_cow(number)}#{the_dog(number)}#{the_cat(number)}#{the_rat(number)}the malt that lay in the house that Jack built.\n"
+      "This is #{the_horse(number)}#{the_farmer(number)}#{the_rooster(number)}#{the_priest(number)}#{the_man(number)}#{the_maiden(number)}#{the_cow(number)}#{the_dog(number)}#{the_cat(number)}#{the_rat(number)}#{the_malt(number)}the house that Jack built.\n"
     end
   end
 
@@ -66,6 +64,12 @@ class House
   def the_rat(number)
     if number >= 3
       "the rat that ate "
+    end
+  end
+
+  def the_malt(number)
+    if number >= 2
+      "the malt that lay in "
     end
   end
 
