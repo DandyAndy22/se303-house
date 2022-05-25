@@ -17,7 +17,7 @@ class House
     elsif number == 8
       "This is the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
     else
-      "This is #{the_horse(number)}#{the_farmer(number)}#{the_rooster(number)}the priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
+      "This is #{the_horse(number)}#{the_farmer(number)}#{the_rooster(number)}#{the_priest(number)}the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
     end
   end
 
@@ -39,7 +39,11 @@ class House
     end
   end
 
-
+  def the_priest(number)
+    if number >= 9    
+      "the priest all shaven and shorn that married "
+    end
+  end
 
   def recite
     (1..12).each.collect { |number| "#{line(number)}" }.join("\n")
