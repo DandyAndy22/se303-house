@@ -4,10 +4,8 @@ class House
       "This is the house that Jack built.\n"
     elsif number == 2
       "This is the malt that lay in the house that Jack built.\n"
-    elsif number == 3
-      "This is the rat that ate the malt that lay in the house that Jack built.\n"
     else
-      "This is #{the_horse(number)}#{the_farmer(number)}#{the_rooster(number)}#{the_priest(number)}#{the_man(number)}#{the_maiden(number)}#{the_cow(number)}#{the_dog(number)}the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
+      "This is #{the_horse(number)}#{the_farmer(number)}#{the_rooster(number)}#{the_priest(number)}#{the_man(number)}#{the_maiden(number)}#{the_cow(number)}#{the_dog(number)}#{the_cat(number)}the rat that ate the malt that lay in the house that Jack built.\n"
     end
   end
 
@@ -56,6 +54,12 @@ class House
   def the_dog(number)
     if number >= 5
       "the dog that worried "
+    end
+  end
+
+  def the_cat(number)
+    if number >= 4
+      "the cat that killed "
     end
   end
 
