@@ -26,10 +26,10 @@ class House
   end
 
   def the_horse(number)
-    if number == 12
-    "the horse and the hound and the horn that belonged to "
-    elsif number == 11
+    if number == 11
       ""
+    else
+      "the horse and the hound and the horn that belonged to "
     end
   end
 
