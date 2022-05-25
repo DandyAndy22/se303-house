@@ -1,6 +1,9 @@
 class House
+
+  phrases = []
+
   def line(number)
-    "This is #{the_horse(number)}#{the_farmer(number)}#{the_rooster(number)}#{the_priest(number)}#{the_man(number)}#{the_maiden(number)}#{the_cow(number)}#{the_dog(number)}#{the_cat(number)}#{the_rat(number)}#{the_malt(number)}the house that Jack built.\n"
+    "This is #{the_horse(number)}#{the_farmer(number)}#{the_rooster(number)}#{the_priest(number)}#{the_man(number)}#{the_maiden(number)}#{the_cow(number)}#{the_dog(number)}#{the_cat(number)}#{the_rat(number)}#{the_malt(number)}#{jack(number)}\n"
   end
 
   def the_horse(number)
@@ -66,6 +69,12 @@ class House
   def the_malt(number)
     if number >= 2
       "the malt that lay in "
+    end
+  end
+
+  def jack(number)
+    if number >= 1
+      "the house that Jack built."
     end
   end
 
