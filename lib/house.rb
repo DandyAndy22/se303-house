@@ -106,6 +106,3 @@ class House
     (1..12).each.collect { |number| "#{line(number)}" }.join("\n")
   end
 end
-
-# generate pirate lyrics
-puts(House.new("pirate").recite)
