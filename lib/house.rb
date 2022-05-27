@@ -17,6 +17,10 @@ class House
     ]
   end
 
+  def the_intro
+    "This is "
+  end
+
   def the_horse(number)
     if number >= 12
       @phrases[11]
@@ -90,7 +94,7 @@ class House
   end
 
   def line(number)
-    "This is #{the_horse(number)}#{the_farmer(number)}#{the_rooster(number)}#{the_priest(number)}#{the_man(number)}#{the_maiden(number)}#{the_cow(number)}#{the_dog(number)}#{the_cat(number)}#{the_rat(number)}#{the_malt(number)}#{jack(number)}\n"
+    "#{the_intro()}#{the_horse(number)}#{the_farmer(number)}#{the_rooster(number)}#{the_priest(number)}#{the_man(number)}#{the_maiden(number)}#{the_cow(number)}#{the_dog(number)}#{the_cat(number)}#{the_rat(number)}#{the_malt(number)}#{jack(number)}\n"
   end
 
   def recite
