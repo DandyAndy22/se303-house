@@ -1,6 +1,7 @@
 class House
 
-  def initialize
+  def initialize(theme = "original")
+    @theme = theme
     @phrases = [
       "the house that Jack built.",  
       "the malt that lay in ",
@@ -18,7 +19,11 @@ class House
   end
 
   def the_intro
-    "This is "
+    if @theme == "original"
+      "This is "
+    elsif @theme == "pirate"
+      "Thar be "
+    end
   end
 
   def the_horse(number)
@@ -101,3 +106,6 @@ class House
     (1..12).each.collect { |number| "#{line(number)}" }.join("\n")
   end
 end
+
+# generate pirate lyrics
+puts(House.new("pirate").recite)
