@@ -19,7 +19,7 @@ class House
   end
 
   def the_intro
-    if @theme == "original"
+    if @theme == "original" or @theme == "random"
       "This is "
     elsif @theme == "pirate"
       "Thar be "
@@ -103,6 +103,10 @@ class House
   end
 
   def recite
-    (1..12).each.collect { |number| "#{line(number)}" }.join("\n")
+    if @theme == "original" or @theme == "pirate"
+      (1..12).each.collect { |number| "#{line(number)}" }.join("\n")
+    elsif @theme == "random"
+      (1..12).to_a.shuffle.each.collect { |number| "#{line(number)}" }.join("\n")
+    end
   end
 end
