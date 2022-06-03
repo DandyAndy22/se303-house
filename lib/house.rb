@@ -36,11 +36,22 @@ class House
     "#{line_items}\n"
   end
 
+  def random_line(number)
+    random_phrases = @phrases.shuffle
+    line_items = "#{the_intro()}"
+
+    (number - 1).downto(0) do |phrase|
+      line_items << random_phrases[phrase]
+    end
+
+    "#{line_items}\n"
+  end
+
   def recite
     if @theme == "original" or @theme == "pirate"
       (1..12).each.collect { |number| "#{line(number)}" }.join("\n")
     elsif @theme == "random"
-      (1..12).to_a.shuffle.each.collect { |number| "#{line(number)}" }.join("\n")
+      (1..12).each.collect { |number| "#{random_line(number)}" }.join("\n")
     end
   end
 end
