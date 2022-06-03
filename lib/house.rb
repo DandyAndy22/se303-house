@@ -97,8 +97,8 @@ class House
       @phrases[0]
     end
   end
-  
-  def line_items(number)
+
+  def line(number)
     line_items = "#{the_intro()}"
 
     (number - 1).downto(0) do |phrase|
@@ -130,11 +130,6 @@ class House
     end
 
     "#{line_items}\n"
-  end
-
-  def line(number)
-    line_items(number)
-    # "#{the_intro()}#{the_horse(number)}#{the_farmer(number)}#{the_rooster(number)}#{the_priest(number)}#{the_man(number)}#{the_maiden(number)}#{the_cow(number)}#{the_dog(number)}#{the_cat(number)}#{the_rat(number)}#{the_malt(number)}#{jack(number)}\n"
   end
 
   def recite
