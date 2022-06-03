@@ -30,31 +30,7 @@ class House
     line_items = "#{the_intro()}"
 
     (number - 1).downto(0) do |phrase|
-      if number >= 1
-        line_items << @phrases[phrase]
-      elsif number >= 2
-        line_items << @phrases[phrase]
-      elsif number >= 3    
-        line_items << @phrases[phrase]
-      elsif number >= 4    
-        line_items << @phrases[phrase]
-      elsif number >= 5
-        line_items << @phrases[phrase]
-      elsif number >= 6
-        line_items << @phrases[phrase]
-      elsif number >= 7
-        line_items << @phrases[phrase]
-      elsif number >= 8
-        line_items << @phrases[phrase]
-      elsif number >= 9
-        line_items << @phrases[phrase]
-      elsif number >= 10
-        line_items << @phrases[phrase]
-      elsif number >= 11
-        line_items << @phrases[phrase]
-      elsif number >= 12
-        line_items << @phrases[phrase]
-      end
+      line_items << @phrases[phrase]
     end
 
     "#{line_items}\n"
