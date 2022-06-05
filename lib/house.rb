@@ -39,15 +39,20 @@ class House
   end
 
   def random_line(number)
-    random_phrases = @phrases.drop(1).shuffle
-    random_phrases.unshift("the house that Jack built.")
+    @phrases = @phrases.drop(1).shuffle
+    @phrases.unshift("the house that Jack built.")
     line_items = "#{the_intro()}"
 
     (number - 1).downto(0) do |phrase|
-      line_items << random_phrases[phrase]
+      line_items << @phrases[phrase]
     end
 
     "#{line_items}\n"
+  end
+
+  def randomize_line
+    random_phrases = @phrases.drop(1).shuffle
+    random_phrases.unshift("the house that Jack built.")
   end
 
   def recite
