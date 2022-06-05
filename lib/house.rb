@@ -37,7 +37,8 @@ class House
   end
 
   def random_line(number)
-    random_phrases = @phrases.shuffle
+    random_phrases = @phrases.drop(1).shuffle
+    random_phrases.unshift("the house that Jack built.")
     line_items = "#{the_intro()}"
 
     (number - 1).downto(0) do |phrase|
