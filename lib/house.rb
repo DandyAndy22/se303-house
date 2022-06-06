@@ -22,7 +22,7 @@ class House
     if @theme == "original"
       HouseVerse.new().intro
     elsif @theme == "random"
-      "This is "
+      PirateVerse.new().intro
     elsif @theme == "pirate"
       "Thar be "
     end
@@ -83,15 +83,22 @@ class HouseVerse
 
   def line(number)
     line_items = "#{@intro}"
-
     (number - 1).downto(0) do |phrase|
       line_items << @phrases[phrase]
     end
-
     "#{line_items}\n"
   end
 
   def recite
     (1..12).each.collect { |number| "#{line(number)}" }.join("\n")
+  end
+end
+
+class PirateVerse < HouseVerse
+  
+  attr_accessor :intro
+
+  def initialize
+    @intro = "Thar be "
   end
 end
